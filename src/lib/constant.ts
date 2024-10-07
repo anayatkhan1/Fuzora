@@ -101,7 +101,7 @@ export const menuOptions = [
 export const EditorCanvasDefaultCardTypes = {
 	Discord: {
 		description: "Post messages to your discord server",
-		type: "Trigger",
+		type: "Action",
 	},
 	Notion: { description: "Create entries directly in notion.", type: "Action" },
 	Slack: { description: "Send a notification to slack", type: "Action" },
@@ -109,6 +109,11 @@ export const EditorCanvasDefaultCardTypes = {
 	Condition: {
 		description: "Boolean operator that creates different conditions lanes.",
 		type: "Action",
+	},
+	"Google Drive": {
+		description:
+			"Connect with Google drive to trigger actions or to create files and folders.",
+		type: "Trigger",
 	},
 	Trigger: {
 		description: "An event that starts the workflow.",
@@ -126,11 +131,7 @@ export const EditorCanvasDefaultCardTypes = {
 			"Connect any app that has an API key and send data to your applicaiton.",
 		type: "Action",
 	},
-	"Google Drive": {
-		description:
-			"Connect with Google drive to trigger actions or to create files and folders.",
-		type: "Action",
-	},
+	
 	"Google Calendar": {
 		description: "Create a calendar invite.",
 		type: "Action",
