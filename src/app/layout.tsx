@@ -10,8 +10,21 @@ import { ClerkProvider } from "@clerk/nextjs";
 const font = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Fuzora.",
-	description: "Automate Your Work With Fuzora.",
+	title: "Fuzora",
+	description: "Automate your work with Fuzora",
+	openGraph: {
+		title: "Fuzora",
+		description: "Automate your work with Fuzora",
+		url: "https://fuzora.xyz",
+		images: [
+			{
+				url: "/fuzora-thumbnails.png",
+				width: 1260,
+				height: 800,
+			},
+		],
+		locale: "en-EN",
+	},
 };
 
 export default function RootLayout({
@@ -24,6 +37,9 @@ export default function RootLayout({
 			publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
 		>
 			<html lang="en">
+				<head>
+					<link rel="icon" href="/favicon.ico" sizes="any" />
+				</head>
 				<body className={font.className}>
 					<ThemeProvider
 						attribute="class"
