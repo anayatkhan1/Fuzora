@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fuzora - Automation Builder
 
-## Getting Started
+Fuzora is a powerful SaaS automation builder that helps you streamline your workflow by connecting your favorite tools and automating tasks with ease. With Fuzora, you can link your Google Drive to monitor changes in real time, send notifications or custom messages through Slack and Discord, and automate the creation of entries in Notion databases. Designed to save time and reduce manual effort, Fuzora simplifies your work, allowing you to focus on what matters most.
 
-First, run the development server:
+![Fashion Bio-Link Website (1)](https://github.com/user-attachments/assets/9cc33ead-873d-4a29-94e0-b9e002c3570f)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- 🏢 Connect users Google Drive to the app
+- 🌐 Watch for changes in google drive
+- 🚀 Connect users slack to send notification and custom messages
+- 💻 Connect users discord to send notification and custom messages
+- 🔄 Connect users Notion to create entries in a database
+- 🛒 Stripe to charge month to month subscriptions 
+- 🔐 Payments based on credits consumed
+- 💳 Beautiful redesigned node interface
+- 🚨 Drag and drop node builder
+- 💰 Create automations flows
+- 📊 Create a sequence of actions to fire after a trigger event happens
+- 🗺️ Mini map to see all workflow nodes
+- ⭐️ Infinite Canvas
+- ✨ Expandable sidebar with drag feature
+- ⚡️Aceternity UI
+- ☀️ Light & Dark mode
+- 📄 Functioning beautiful landing page
+
+## Built with
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn/ui](https://ui.shadcn.com/)
+- [Aceternity UI](https://ui.aceternity.com/)
+- [Clerk](https://clerk.com/)
+- [Stripe](https://stripe.com/)
+- [React Flow](https://reactflow.dev/)
+- [Neon](https://neon.tech/)
+- [Prisma](https://www.prisma.io/)
+- [Upload Care](https://uploadcare.com/)
+- [NGrok](https://ngrok.com/)
+
+### Tools
+- [Biome](https://biomejs.dev/)
+- [Husky](https://typicode.github.io/husky/)
+
+## Feature Requests
+
+To request a feature open a [GitHub issue](https://github.com/anayatkhan1/Fuzora/issues).
+
+ ## Contribution Guidelines
+
+Thank you for considering contributing to our SAAS Automation Builder project! Please follow these guidelines to ensure smooth collaboration:
+
+1. Fork the repository to your GitHub account.
+2. Clone the forked repository to your local machine:
+3. Create a new branch for your changes:
+
+    ```bash
+    git checkout -b feature/your-feature-name
+    ```
+
+4. Make your changes and ensure they adhere to the project's coding style and guidelines.
+5. Test your changes thoroughly to avoid introducing bugs.
+6. Commit your changes with clear and descriptive commit messages:
+
+    ```bash
+    git commit -m 'feat: Add your descriptive commit message'
+    ```
+    ``Note:`` Before committing changes, ensure you include one of these tags in your commit message: ```feat, fix, wip, patch, build```.
+
+7. Push your changes to your forked repository:
+
+    ```bash
+    git push origin feature/your-feature-name
+    ```
+
+8. Open a pull request against the `main` branch of the original repository.
+9. Provide a clear and concise description of your changes in the pull request, along with any relevant information.
+10. Ensure your pull request passes all checks and tests before requesting a review.
+
+### Setting Up Environment Variables
+
+To run the project locally, you need to set up the following environment variables:
+
+```env
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+DATABASE_URL=
+
+## Development URL
+NEXT_PUBLIC_URL=https://localhost:3000
+NEXT_PUBLIC_DOMAIN=localhost:3000
+NEXT_PUBLIC_SCHEME=https://
+
+NEXT_PUBLIC_GOOGLE_SCOPES=https://www.googleapis.com/auth/drive
+NEXT_PUBLIC_OAUTH2_ENDPOINT=https://accounts.google.com/o/oauth2/v2/auth
+
+NEXT_PUBLIC_UPLOAD_CARE_CSS_SRC=https://cdn.jsdelivr.net/npm/@uploadcare/blocks@
+NEXT_PUBLIC_UPLOAD_CARE_SRC_PACKAGE=/web/lr-file-uploader-regular.min.css
+
+DISCORD_CLIENT_ID=
+DISCORD_CLIENT_SECRET=
+DISCORD_TOKEN=
+DISCORD_PUBLICK_KEY=
+NEXT_PUBLIC_DISCORD_REDIRECT=https://discord.com/oauth2/authorize?client_id=*CLIENTID*&response_type=code&redirect_uri=https%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fcallback%2Fdiscord&scope=identify+guilds+connections+guilds.members.read+email+webhook.incoming
+
+NOTION_API_SECRET=
+NOTION_CLIENT_ID=
+NOTION_REDIRECT_URI=https://localhost:3000/api/auth/callback/notion
+NEXT_PUBLIC_NOTION_AUTH_URL=https://api.notion.com/v1/oauth/authorize?client_id=*CLIENTID*&response_type=code&owner=user&redirect_uri=https%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fcallback%2Fnotion
+
+# ,groups:read,mpim:read,im:read'
+
+SLACK_SIGNING_SECRET=
+SLACK_BOT_TOKEN=
+SLACK_APP_TOKEN=
+SLACK_CLIENT_ID=
+SLACK_CLIENT_SECRET=
+SLACK_REDIRECT_URI=https://localhost:3000/api/auth/callback/slack
+NEXT_PUBLIC_SLACK_REDIRECT=https://slack.com/oauth/v2/authorize?client_id=*CLIENTID*&scope=chat:write,channels:read,groups:read,mpim:read,im:read&user_scope=chat:write,channels:read,groups:read,mpim:read,im:read&redirect_uri=https%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fcallback%2Fslack
+
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+OAUTH2_REDIRECT_URI=https://electric-grizzly-7.clerk.accounts.dev/v1/oauth_callback
+NGROK_URI=
+CRON_JOB_KEY=
+STRIPE_SECRET=
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You can set these environment variables by creating a `.env.local or .env` file in the root directory of the project and adding the variables with their respective values:
