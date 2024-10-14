@@ -2,7 +2,7 @@
 
 Fuzora is a powerful SaaS automation builder that helps you streamline your workflow by connecting your favorite tools and automating tasks with ease. With Fuzora, you can link your Google Drive to monitor changes in real time, send notifications or custom messages through Slack and Discord, and automate the creation of entries in Notion databases. Designed to save time and reduce manual effort, Fuzora simplifies your work, allowing you to focus on what matters most.
 
-![Fashion Bio-Link Website (1)](https://github.com/user-attachments/assets/9cc33ead-873d-4a29-94e0-b9e002c3570f)
+![Fashion Bio-Link Website (2)](https://github.com/user-attachments/assets/1bff524f-9a2d-449b-8b97-32da53bb2709)
 
 ## Features
 
